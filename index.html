@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Alert dan Dialog Box</title>
+</head>
+<body>
+    <h1>Interaksi Java Script</h1>
+<!-- Tombol menampilkan Confirm -->
+<button onclick="showConfirm()">Tampilkan Confirm</button>
+<p id="greeting-message"></p>
+<script>    
+    function showConfirm() {
+        const konfirmasi = confirm("Selamat Datang Di Website Interaksi Java Script!\nApakah Anda ingin melanjutkan?");
+        if (konfirmasi) {
+            confirm("Apakah Anda ingin mengisi data pengguna?"); 
+        } else {
+            alert("Anda menekan Batal.");
+        }
+        if (konfirmasi) {
+            const FormData = prompt("Masukan Nama Anda:");
+        if (FormData != null && FormData != "") {
+            document.getElementById("greeting-message").innerText = "Halo, " + FormData + "! Selamat datang di website kami.";
+        } else {
+            document.getElementById("greeting-message").innerText = "Halo, Pengunjung! Selamat datang di website kami.";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
